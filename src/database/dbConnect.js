@@ -1,18 +1,7 @@
 import mongoose from "mongoose";
-import("dotenv/config");
+import "dotenv/config";
 
-const db = {
-  connect() {
-    try {
-      mongoose
-        .connect(
-          `mongodb+srv://clinicaveterinaria:${process.env.PASSWORD}@cluster0.1gnlrz6.mongodb.net/?retryWrites=true&w=majority`
-        )
-        .then(console.log("Database connected"));
-    } catch (error) {
-      console.log(error);
-    }
-  },
-};
+mongoose.connect(process.env.STRING_CONEXAO_DB);
+let db = mongoose.connection;
 
 export default db;
