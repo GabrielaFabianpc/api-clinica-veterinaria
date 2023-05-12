@@ -46,11 +46,6 @@ class CadastroController {
         { _id: id },
         animalBody
       );
-      /*      if (animalAtualizado.matchedCount == 0) {
-        res
-          .status(500)
-          .send({ message: "Cadastro do animal não encontrado no sistema!" });
-      }*/
       res.status(200).json({
         message: "Cadastro do animal atualizado com sucesso!",
       });
